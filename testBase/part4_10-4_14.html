@@ -16,6 +16,23 @@
   </head>
   <body>
     <h1 id="Title" style="color:green" dir="ltr">The Great Useless Bullion Questionnaire</h1>
+    <h2>Test cases</h2>
+    <nav role="navigation">
+      <ul>
+        <li><a href="#forms">Section 4.10: Forms</a></li>
+        <li>
+          <a href="#scripting">Section 4.11: Scripting</a>
+          <ul>
+            <li><a href="#script">Script to print Hello World</a></li>
+            <li><a href="#noscript">NoScript: Activates when JavaScript is disabled</a></li>
+            <li><a href="#template">Template for table rows</a></li>
+            <li><a href="#canvas">Canvas</a></li>
+          </ul>
+        <!-- This button is disabled and selected to be yellow -->
+        <li><a href="#last">Section 4.13/4.14: Disable/Selector</a></li>
+      </ul>
+    </nav>
+
     <section id="forms">
                 <form action="#">
                     <fieldset id="text_boxes">
@@ -207,71 +224,78 @@
                     <p><a href="#top">[Top]</a></p>
                 </form>
             </section>
+    <br />
+    <section id="scripting">
+      <div id="script">
+        <script type="text/javascript">document.write("Hello, world");</script>
+      </div>
+      <div id="noscript">
+        <noscript>JavaScript is not enabled</noscript>
+      </div>
+      <br />
+    </section>
 
-    <br />
-    <script type="text/javascript">document.write("Hello, world");</script>
-    <noscript>JavaScript is not enabled</noscript>
-    <br />
-    <canvas id="myCanvas" style="border:1px solid black" width="250" height="250">
-      Enable JavaScript to view this image
-    </canvas>
-    <br />
-    <button onclick="f()">Draw a rectangle</button>
-    <br />
-    <script type="text/javascript">document.write("Hello, world");</script>
-    <noscript>JavaScript is not enabled</noscript>
+    <section id="template">
+        <table id="producttable">
+          <thead>
+            <tr>
+              <td>Product</td>
+              <td>Price</td>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
 
-    <table id="producttable">
-      <thead>
-        <tr>
-          <td>Product</td>
-          <td>Price</td>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-
-    <template id="productrow">
-      <tr>
-        <td class="record"></td>
-        <td></td>
-      </tr>
-    </template>
+        <template id="productrow">
+          <tr>
+            <td class="record"></td>
+            <td></td>
+          </tr>
+        </template>
+    </section>
 
     <script>
-    if ('content' in document.createElement('template')) {
+      if ('content' in document.createElement('template')) {
 
-      // Instantiate the table with the existing HTML tbody and the row with the template
-      var t = document.querySelector('#productrow'),
-      td = t.content.querySelectorAll("td");
-      td[0].textContent = "American Eagle";
-      td[1].textContent = "$99.99";
+        // Instantiate the table with the existing HTML tbody and the row with the template
+        var t = document.querySelector('#productrow'),
+        td = t.content.querySelectorAll("td");
+        td[0].textContent = "American Eagle";
+        td[1].textContent = "$99.99";
 
-      // Clone the new row and insert it into the table
-      var tb = document.getElementsByTagName("tbody");
-      var clone = document.importNode(t.content, true);
-      tb[0].appendChild(clone);
-      
-      // Create a new row
-      td[0].textContent = "Silver Ingot";
-      td[1].textContent = "$999.99";
+        // Clone the new row and insert it into the table
+        var tb = document.getElementsByTagName("tbody");
+        var clone = document.importNode(t.content, true);
+        tb[0].appendChild(clone);
+        
+        // Create a new row
+        td[0].textContent = "Silver Ingot";
+        td[1].textContent = "$999.99";
 
-      // Clone the new row and insert it into the table
-      var clone2 = document.importNode(t.content, true);
-      tb[0].appendChild(clone2);
+        // Clone the new row and insert it into the table
+        var clone2 = document.importNode(t.content, true);
+        tb[0].appendChild(clone2);
 
-      // Create a new row
-      td[0].textContent = "Platinum bar";
-      td[1].textContent = "$9999.99";
+        // Create a new row
+        td[0].textContent = "Platinum bar";
+        td[1].textContent = "$9999.99";
 
-      // Clone the new row and insert it into the table
-      var clone2 = document.importNode(t.content, true);
-      tb[0].appendChild(clone2);
-
+        // Clone the new row and insert it into the table
+        var clone2 = document.importNode(t.content, true);
+        tb[0].appendChild(clone2);
     }
     </script>
 
-    <button disabled>This button is disabled</button>
+    <section id="canvas">
+      <canvas id="myCanvas" style="border:1px solid black" width="250" height="250">
+        Enable JavaScript to view this image
+      </canvas>
+      <br />
+      <button onclick="f()">Draw a rectangle</button>
+    </section>
 
+    <div id="last">
+      <button disabled>This button is disabled</button>
+    </div>
   </body>
 </html>
