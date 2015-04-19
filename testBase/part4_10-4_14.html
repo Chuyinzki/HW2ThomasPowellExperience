@@ -80,15 +80,25 @@
                     <br>
 
                     <fieldset id="forms_select">
-                        <legend>Select your gender</legend>
+                        <legend>Demographics</legend>
 
                         <p>
                             <label for="select">Gender</label>
                             <select id="select">
-                                <optgroup label="Option Group">
+                                <optgroup label="Gender">
                                     <option>Male</option>
                                     <option>Female</option>
                                     <option>Animal/Human Hybrid</option>
+                                </optgroup>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="select_lang">What LANGuage do you speak?</label>
+                            <select id="select_lang">
+                                <optgroup label="Languages">
+                                    <option lang="en-US" translate="no">English</option>
+                                    <option lang="es" translate="no">Espa&#241;ol</option>
+                                    <option lang="fr" translate="no">Fran&#231;ais</option>
                                 </optgroup>
                             </select>
                         </p>
@@ -105,7 +115,7 @@
                             <li><label for="checkbox4"><input id="checkbox4" name="checkbox" type="checkbox"> Copper</label></li>
                         </ul>
 
-                        <label for="bullion_form">Preferred form of bullion?</label>
+                        <label for="bullion_form">Favorite bullion piece?</label>
                         <select id="bullion_form">
                             <optgroup label="Coins">
                                 <option value="gold_coin">Gold American Eagle</option>
@@ -168,6 +178,7 @@
                             <label for="idtl">Datetime-local input</label>
                             <input type="datetime-local" id="idtl" value="1970-01-01T00:00">
                         </p>
+
                     </fieldset>
 
                     <br>
