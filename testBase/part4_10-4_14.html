@@ -68,7 +68,7 @@
                             <input id="input_emailaddress" type="email" multiple placeholder="name@email.com">
                         </p>
                         <p>
-                            <label>Search <input name=hp type=text list=commonsearch placeholder="Search Term" size=5></label>
+                            <label>Search <input name=hp type=text list=commonsearch placeholder="Search Term" size="15"></label>
                             <datalist id=commonsearch>
                                 <option value="Gold Bars" label="Gold">
                                 <option value="Silver Coins" label="Silver">
@@ -76,13 +76,13 @@
                             
                         </p>
                         <p>
-                            <label for="input_text2">Number Input <abbr title="Required">*</abbr></label>
-                            <input id="input_text2" type="number" placeholder="Enter a Number">
+                            <label for="input_text2">Age <abbr title="Required"></abbr></label>
+                            <input id="input_text2" type="number" size=3 placeholder="Enter a Number"> *Required
                         </p>
                         <p>
                             <label for="input_textarea">Comments</label>
                             <br />
-                            <textarea id="input_textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
+                            <textarea id="input_textarea" dirname="ltr" rows="10" cols="50" placeholder="Enter your message here"></textarea>
                         </p>
                     </fieldset>
 
@@ -225,6 +225,7 @@
                 </form>
             </section>
     <br />
+
     <section id="scripting">
       <div id="script">
         <script type="text/javascript">document.write("Hello, world");</script>
@@ -290,6 +291,8 @@
       <canvas id="myCanvas" style="border:1px solid black" width="250" height="250">
         Enable JavaScript to view this image
       </canvas>
+      <br />
+      <script type="text/javascript">document.write("Intelligence Test. Draw a rectangle below.");</script>
       <br />
       <button onclick="f()">Draw a rectangle</button>
     </section>
