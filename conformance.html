@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Conformance Results</title>
+    <meta charset="UTF-8">
+    <base href="testBase/">
+    <link rel="stylesheet" href="index.css">
+    <style>
+      h1 {color: green}
+      footer {text-align: center}
+    </style>
+  </head>
+
+  <body>
+      Utilizing Chrome Version 41.0.2272.76 (64-bit) and Firefox 36.0 (Mozilla Firefox for Ubuntu canonical -1.0) and Internet Explorer 11.0.09600.17728
+      <p>
+        SECTION 4.4-4.7
+        ONLY tested up until "Main" section
+        No difference between firefox and Chrome and IE 
+      </p>
+      <p>
+        SECTION 4.8-4.9
+        Firefox does not display the lines for the tables. IE and Firefox are identical. 
+      </p>
+      <p>
+        SECTION 4.10-4.14
+        IE has much lighter lines around each section. This makes it much harder to see the boundary lines.
+
+        For displaying encryption levels, Chrome will show a number along with each level while firefox will simplify it to just High Grade or Low Grade. IE does not display a dropdown whatsoever for the security level.
+
+        For readonly sections, firefox grays out the text area, making it a lot more obvious that it is not editable. IE and Chrome do not.
+
+        For the Age element, firefox always shows the up and down arrows which makes it clear that you can increment the value using the arrows. Chrome only displays the arrows when placing the pointer over it. IE does not display this arrow.
+
+        In general, visuals are different. Chrome is more boxy while firefox is is cleaner and uses colors to indicate things more often. IE is very plain using mostly black and white. Firefox uses more orange, IE uses blue and black/white. Chrome uses more blue.
+
+        For the happiness meter, IE will show the value as the slider is dragged. Chrome and Firefox do not do this.
+
+        The date formats are different in firefox compared to chrome! firefox use YYYY-MM-DD while chrome uses MM/DD/YYYY. Week input is also different. Chrome displays "Week 01, 1990" while firefox displays "1990-W01". IE uses the same formatting as firefox.
+
+        IE does not open a color picker when clicking the "color input" option.
+
+        IE does not support the display of meters. It will instead display the text value.
+
+        IE is unable to draw the rectangle since javascript is not enabled.
+        
+      </p>
+  </body>
+</html>
