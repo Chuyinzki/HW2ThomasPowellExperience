@@ -5,7 +5,7 @@
     <title>Part 4.10-4.14</title>
     <script type="text/javascript">
       function f() {
-	var c = document.getElementByID("myCanvas");
+	var c = document.getElementById("myCanvas");
 	if (c.getContext) {
 	  var cxt = c.getContext("2d");
           cxt.fillRect(25, 25, 100, 100);
@@ -14,7 +14,188 @@
     </script>
   </head>
   <body>
-    <h1 id="Title" style="color:green">Title</h1>
+    <h1 id="Title" style="color:green">The Great Useless Bullion Questionnaire</h1>
+    <section id="forms">
+                <form action="#">
+                    <fieldset id="text_boxes">
+                        <legend>Short Answer Questions</legend>
+
+                        <p>
+                            <input type="hidden" name="Hidden" value="oOOoOO">
+                        </p>
+                        <p>
+                            <label for="input_text">Name <abbr title="Required"></abbr></label>
+                            <input id="input_text" type="text" placeholder="Text Input" pattern=".{3,}" required title="3 characters minimum" autofocus> *Required (3+ characters MIN)
+                        </p>
+                        <p>
+                            <label for="input_password">Password</label>
+                            <input id="input_password" type="password" placeholder="Type your Password" maxlength=10 autocomplete="off"> *10 characters MAX
+                        </p>
+                        <p>
+                            <label for="key_gen">Security Level</label>
+                            <keygen id="key_gen" name="security">
+                        </p>
+                        <p>
+                            <label for="input_webaddress">Your Blog</label>
+                            <input id="input_webaddress" type="url" placeholder="http://yoursite.com">
+                        </p>
+                        <p>
+                            <label for="input_telephone">Phone Number</label>
+                            <input id="input_telephone" type="tel" placeholder="(xxx)xxx-xxxx">
+                            <label for="tel_example">Example: </label>
+                            <input id="tel_example" readonly="readonly" name="ex" value="(888)888-8888">
+                        </p>
+                        <p>
+                            <label for="input_emailaddress">Email Address</label>
+                            <input id="input_emailaddress" type="email" multiple placeholder="name@email.com">
+                        </p>
+                        <p>
+                            <label>Search <input name=hp type=text list=commonsearch placeholder="Search Term" size=5></label>
+                            <datalist id=commonsearch>
+                                <option value="Gold Bars" label="Gold">
+                                <option value="Silver Coins" label="Silver">
+                            </datalist>
+                            
+                        </p>
+                        <p>
+                            <label for="input_text2">Number Input <abbr title="Required">*</abbr></label>
+                            <input id="input_text2" type="number" placeholder="Enter a Number">
+                        </p>
+                        <p>
+                            <label for="input_textarea">Comments</label>
+                            <br />
+                            <textarea id="input_textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
+                        </p>
+                    </fieldset>
+
+                    <br>
+
+                    <fieldset id="forms_select">
+                        <legend>Select your gender</legend>
+
+                        <p>
+                            <label for="select">Gender</label>
+                            <select id="select">
+                                <optgroup label="Option Group">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Animal/Human Hybrid</option>
+                                </optgroup>
+                            </select>
+                        </p>
+                    </fieldset>
+
+                    <br>
+
+                    <fieldset id="forms_checkbox">
+                        <legend>Which metals do you collect? [Checkbox & grouping]</legend>
+                        <ul class="list list--bare">
+                            <li><label for="checkbox1"><input id="checkbox1" name="checkbox" type="checkbox" checked="checked"> Gold</label></li>
+                            <li><label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox"> Silver</label></li>
+                            <li><label for="checkbox3"><input id="checkbox3" name="checkbox" type="checkbox"> Platinum</label></li>
+                            <li><label for="checkbox4"><input id="checkbox4" name="checkbox" type="checkbox"> Copper</label></li>
+                        </ul>
+
+                        <label for="bullion_form">Preferred form of bullion?</label>
+                        <select id="bullion_form">
+                            <optgroup label="Coins">
+                                <option value="gold_coin">Gold American Eagle</option>
+                                <option value="silver_coin">Silver American Half Dollar</option>
+                            </optgroup>
+                            <optgroup label="Other">
+                                <option value="gold_ingot">Gold Ingot</option>
+                                <option value="gold_bar">Gold Bars</option>
+                            </optgroup>
+                        </select>
+                    </fieldset>
+
+                    <br>
+
+                    <fieldset id="forms_radio">
+                        <legend>Primary purpose for collecting bullion? [Radio Buttons]</legend>
+
+                        <ul class="list list--bare">
+                            <li><label for="radio1"><input id="radio1" name="radio" type="radio" class="radio" checked="checked"> Diversify Investments</label></li>
+                            <li><label for="radio2"><input id="radio2" name="radio" type="radio" class="radio"> They're pretty!</label></li>
+                            <li><label for="radio3"><input id="radio3" name="radio" type="radio" class="radio" disabled> What's Bullion?</label></li>
+                        </ul>
+                    </fieldset>
+
+                    <br>
+
+                    <fieldset id="forms_html5">
+                        <legend>Miscellaneous Information [HTML5 inputs]</legend>
+
+                        <p>
+                            <label for="ic">Color input</label>
+                            <input type="color" id="ic" value="#000888">
+                        </p>
+                        <p>
+                            <label for="in">Number input</label>
+                            <input type="number" id="in" min="0" max="10" value="5">
+                        </p>
+                        <p>
+                            <label for="ir">Happiness Meter</label>
+                            <input type="range" id="ir" min="0" max="10" step="2">
+                            <output name="x" for="ir in"></output>
+                        </p>
+                        <p>
+                            <label for="idd">Date input</label>
+                            <input type="date" id="idd" value="1970-01-01">
+                        </p>
+                        <p>
+                            <label for="idm">Month input</label>
+                            <input type="month" id="idm" value="1970-01">
+                        </p>
+                        <p>
+                            <label for="idw">Week input</label>
+                            <input type="week" id="idw" value="1970-W01">
+                        </p>
+                        <p>
+                            <label for="idt">Datetime input</label>
+                            <input type="datetime" id="idt" value="1970-01-01T00:00:00Z">
+                        </p>
+                        <p>
+                            <label for="idtl">Datetime-local input</label>
+                            <input type="datetime-local" id="idtl" value="1970-01-01T00:00">
+                        </p>
+                    </fieldset>
+
+                    <br>
+
+                    <fieldset id="forms_action">
+                        <legend>Action buttons</legend>
+                        <p>
+                            <label for="fileup">Select File(s): </label>
+                            <input type="file" id="fileup" name="img" multiple>
+
+                            <label>Upload Progress: </label>
+                            <progress id="prog_bar" value=99 max="100"></progress>
+                        </p>
+                        <p>
+                            <input type="submit" value="Input">
+                            <button type="submit">Button</button>
+                            <input type="reset" value="Reset">
+                            <input type="submit" value="Disabled" disabled>
+                        </p>
+                    </fieldset>
+
+                    <br>
+
+                    <fieldset id="pretty_stuff">
+                        <legend>Statistics of our Users</legend>
+                        <br>
+                        <label>Users who collect Gold bars: </label>
+                        <meter value="2" min="0" max="10">2 out of 10</meter> 20%
+                        <br> <br>
+                        <label>Users who collect Silver Coins</label>
+                        <meter value="0.6">75%</meter> 75%
+                        <br><br>
+                    </fieldset>
+                    <p><a href="#top">[Top]</a></p>
+                </form>
+            </section>
+    <br />
     <script type="text/javascript">document.write("Hello, world");</script>
     <noscript>JavaScript is not enabled</noscript>
     <br />
@@ -23,5 +204,59 @@
     </canvas>
     <br />
     <button onclick="f()">Draw a rectangle</button>
+    <br />
+    <script type="text/javascript">document.write("Hello, world");</script>
+    <noscript>JavaScript is not enabled</noscript>
+
+    <table id="producttable">
+      <thead>
+        <tr>
+          <td>Product</td>
+          <td>Price</td>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <template id="productrow">
+      <tr>
+        <td class="record"></td>
+        <td></td>
+      </tr>
+    </template>
+
+    <script>
+    if ('content' in document.createElement('template')) {
+
+      // Instantiate the table with the existing HTML tbody and the row with the template
+      var t = document.querySelector('#productrow'),
+      td = t.content.querySelectorAll("td");
+      td[0].textContent = "American Eagle";
+      td[1].textContent = "$99.99";
+
+      // Clone the new row and insert it into the table
+      var tb = document.getElementsByTagName("tbody");
+      var clone = document.importNode(t.content, true);
+      tb[0].appendChild(clone);
+      
+      // Create a new row
+      td[0].textContent = "Silver Ingot";
+      td[1].textContent = "$999.99";
+
+      // Clone the new row and insert it into the table
+      var clone2 = document.importNode(t.content, true);
+      tb[0].appendChild(clone2);
+
+      // Create a new row
+      td[0].textContent = "Platinum bar";
+      td[1].textContent = "$9999.99";
+
+      // Clone the new row and insert it into the table
+      var clone2 = document.importNode(t.content, true);
+      tb[0].appendChild(clone2);
+
+    }
+    </script>
+
   </body>
 </html>
