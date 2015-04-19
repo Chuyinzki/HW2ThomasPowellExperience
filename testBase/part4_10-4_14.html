@@ -5,13 +5,14 @@
     <title>Part 4.10-4.14</title>
     <script type="text/javascript">
       function f() {
-	var c = document.getElementById("myCanvas");
-	if (c.getContext) {
-	  var cxt = c.getContext("2d");
-          cxt.fillRect(25, 25, 100, 100);
-	}
+	      var c = document.getElementById("myCanvas");
+	      if (c.getContext) {
+	        var cxt = c.getContext("2d");
+                cxt.fillRect(25, 25, 100, 100);
+	      }
       }
     </script>
+    <style> button[disabled] {background-color:yellow} </style>
   </head>
   <body>
     <h1 id="Title" style="color:green">The Great Useless Bullion Questionnaire</h1>
@@ -257,6 +258,8 @@
 
     }
     </script>
+
+    <button disabled>This button is disabled</button>
 
   </body>
 </html>
