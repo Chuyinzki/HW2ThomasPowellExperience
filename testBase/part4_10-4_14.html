@@ -13,14 +13,24 @@
 	{
 	  el.style.color = "green";
 	}
+	var c = document.getElementByID("myCanvas");
+	if (c.getContext) {
+	  var cxt = c.getContext("2d");
+          v.fillRect(10, 10, 150, 75);
+	}
       }
     </script>
+    <style> myCanvas {border:dotted} </style>
   </head>
   <body>
     <h1 id="Title" style="color:green">Title</h1>
-    <button onclick="f()">Change my color</button>
-    <br />
     <script type="text/javascript">document.write("Hello, world");</script>
     <noscript>JavaScript is not enabled</noscript>
+    <br />
+    <canvas id="myCanvas" style="border:1px solid black" width="500" height="500">
+      Enable JavaScript to view this image
+    </canvas>
+    <br />
+    <button onclick="f()">Change title color and draw</button>
   </body>
 </html>
