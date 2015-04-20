@@ -89,7 +89,7 @@
                     <br>
 
                     <fieldset id="forms_select">
-                        <legend>Demographics</legend>
+                        <legend>Demographics [Dropdowns and Selction]</legend>
 
                         <p>
                             <label for="select">Gender</label>
@@ -111,6 +111,16 @@
                                 </optgroup>
                             </select>
                         </p>
+                        <p>
+                        <label for="allowedunits">Select your level of education:</label>
+                        <select id="allowedunits" name="allowedunits" multiple>
+                            <option value="1" selected> Elementary School</option>
+                            <option value="2" selected> Middle School </option>
+                            <option value="3" selected> High School </option>
+                            <option value="4" selected> Some College</option>
+                            <option value="5" selected> College Degree </option>
+                        </select>
+</p>
                     </fieldset>
 
                     <br>
@@ -193,7 +203,7 @@
                     <br>
 
                     <fieldset id="forms_action">
-                        <legend>Action buttons</legend>
+                        <legend>Submission [Action buttons]</legend>
                         <p>
                             <label for="fileup">Select File(s): </label>
                             <input type="file" id="fileup" name="img" multiple>
@@ -212,13 +222,25 @@
                     <br>
 
                     <fieldset id="pretty_stuff">
-                        <legend>Statistics of our Users</legend>
+                        <legend>Statistics of our Users [Meters and Validity]</legend>
                         <br>
                         <label>Users who collect Gold bars: </label>
                         <meter value="2" min="0" max="10">2 out of 10</meter> 20%
                         <br> <br>
                         <label>Users who collect Silver Coins</label>
                         <meter value="0.6">75%</meter> 75%
+                        <br><br>
+                        <label>Is our site awesome? <input name=f type="text" oninput="check(this)"></label>
+                        <script>
+                            function check(input) {
+                                if (input.value == "no") {
+                                    input.setCustomValidity('"' + input.value + '" is not an acceptable answer');
+                                } else {
+                                    // input is fine -- reset the error message
+                                    input.setCustomValidity('');
+                                    }
+                                }
+                        </script> * Try putting "no" and hit enter
                         <br><br>
                     </fieldset>
                     <p><a href="#top">[Top]</a></p>
