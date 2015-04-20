@@ -25,7 +25,7 @@
 
     <fieldset id="elements_not_tested">
       <legend>Elements not tested</legend>
-      The W3 Validator did not support these elements
+      The W3c Validator did not support the rb and rtc elements. Even though it supported the rt element, these three elements are meant to be used together so we did not test them.
       <ul>
         <li>4.5.22-rb</li>
 	<li>4.5.23-rt</li>
@@ -68,30 +68,40 @@
         
         <li>
           For displaying encryption levels, Chrome will show a number along with each level while firefox will simplify it to just "High Grade" or "Low Grade". IE does not display any dropdown or options for the security level since it is not supported.
+	  <br />
+	  <img src="../photos/FirefoxVSChrome_SecurityLevel.png">
         </li>
         
         <li>
           For readonly sections, Firefox grays out the text area, making it a lot more obvious that it is a read-only field. IE and Chrome, however, do not do this so the text area looks as if it already has data entered.
+	  <img src="..photos/IE_readonly.PNG">
         </li>
         
         <li>
           For the Age/number element, Firefox shows the up and down arrows which makes it clear that you can increment or decrement the number value using the arrows. Chrome only displays the arrows when placing the pointer over the textbox. IE does not display this arrow and the user cannot utilize this to manipulate the value in the textbox.
+	  <img src="../photos/FirefoxVSChrome_Age.png">
         </li>
         
         <li>
           In general, the visuals are different between each browser. Chrome and IE look more boxy while firefox is is cleaner and uses colors to indicate states more often. Also, Firefox uses more orange color while IE uses some blue with mostly black and white variations. Chrome uses more blue color for certain elements.
+	  <img src="../photos/FirefoxVSChrome_boxy.png" width="1000">
+	  <img src="../photos/FirefoxVSChrome_colors.png">
         </li>
         
         <li>
           For the happiness meter (range element), IE will show the value as the slider is dragged. This makes it clear to the user what value they are selecting. Chrome and Firefox, however, do not do this.
+	  <img src="../photos/IE_Dateandcolor.PNG">
         </li>
         
         <li>
           The date formats are different in each browser. Firefox use a format of YYYY-MM-DD to represent the date while chrome uses MM/DD/YYYY. Other date related inputs, such as the Week input, is also different. Chrome displays weeks as "Week 01, 1990" while firefox displays "1990-W01". IE uses the same formatting as Firefox.
+	  <img src="../photos/FirefoxVSChrome_Dates.png">
         </li>
         
         <li>
           IE does not open a color picker when clicking the "color input" option. Instead, IE has a text box in which a hex value needs to be inputed. 
+	  <br />
+	  <img src="../photos/IE_colorpicker.PNG">
         </li>
         
         <li>
@@ -100,6 +110,8 @@
         
         <li>
           IE was unable to utilize javascript to draw a rectangle on a canvas.
+	  <br />
+	  <img src="../photos/IE_nojavascript.PNG">
         </li>  
       </ul> 
     </fieldset>
