@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>4.6-4.7 Edits and Embedded Content</title>
+</head>
+<body>
+
+        <header role="banner">
+            <h1>HTML5 Test Page</h1>
+            <p>This is a test page filled with HTML5 elements found in section 4.6 and 4.7 of the HTML5 spec</p>
+        </header>
+
+        <nav role="navigation">
+            <ul>
+                <li>
+                    <a href="#4.6.1">Section 4.6</a>
+                    <ul>
+                        <li><a href="#4.6.1">Inserted text</a></li>
+                        <li><a href="#4.6.2">Deleted text</a></li>
+                    
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#4.7">Section 4.7</a>
+                    <ul>
+                        <li><a href="#4.7.1">Image, Map, and Area</a></li>
+                        <li><a href="#4.7.2">Iframe</a></li>
+                        <li><a href="#4.7.3">Embed</a></li>
+                        <li><a href="#4.7.4">Object</a></li>
+                        <li><a href="#4.7.5">Param</a></li>
+                        <li><a href="#4.7.6">Video and Track</a></li>
+                        <li><a href="#4.7.7">Audio and Source</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+
+<h2 id="4.6.1">Inserted text</h2>
+<p>The &lt;ins&gt; tag indicates content that has been added after the original publication.</p>
+<p>Today I went to the zoo.
+	<ins datetime="2014-04-19" cite="http://www.w3.org/TR/html5/edits.html#edits">
+	I also went to Sea World.
+	</ins>
+</p>
+<br />
+
+<h2 id="4.6.2">Deleted text</h2>
+
+<p>The &lt;del&gt; tag indicates content that has been deleted from the original publication.</p>
+<p>I am studying Computer Science.  
+	<del datetime="2014-05-05" cite="http://www.w3.org/TR/html5/edits.html#edits">
+	I expect to graduate in 2014.
+	</del>
+</p>
+<br />
+	
+<h2 id="4.7.1">Image, Map, and Area</h2>
+<p>&lt;img&gt; with &lt;map&gt; containing &lt;area&gt; - click different areas for different links!</p>
+<img src="http://static.fjcdn.com/comments/My+body+is+ready+_9adb967735d602ac31aebbbfcf685e18.jpg" alt="My Body is Ready" width="310" height="213" usemap="#reggie">
+<map name="reggie">
+	<area shape="rect" coords ="0,0,155,65" href="#4.7.2" alt="eye1">
+	<area shape="rect" coords ="155,0,310,65" href="#4.7.3" alt="eye2">
+	<area shape="rect" coords ="0,65,310,150" href="#4.7.4" alt="nose">
+	<area shape="rect" coords ="0,150,310,213" href="#4.7.5" alt="mouth">
+</map><br />
+
+<h2 id="4.7.2">Iframe</h2>
+<iframe sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation" src="http://espn.go.com" name="ESPN" width="400" height="300">
+</iframe>
+<br />
+
+<h2 id="4.7.3">Embed</h2>
+<p>Interactive flash animation embedded using &lt;embed&gt;:</p>
+<embed type="application/x-shockwave-flash" src="http://www.stolaf.edu/people/giannini/flashanimat/molgenetics/transcription.swf" width="400" height="300">
+<br />
+
+<h2 id="4.7.4">Object</h2>
+<p>HTML page embedded as &lt;object&gt;:</p>
+<object type="text/html" data="sample_page.html" typemustmatch>
+</object>
+<br />
+
+<h2 id="4.7.5">Param</h2>
+<p>MP4 embedded as &lt;object&gt; with &lt;param&gt; autoplay set to false:</p>
+<object type="video/mp4" data="My%20Body%20is%20Ready.mp4" width="400" height="300">
+	<!-- 
+	Object of type mp4 does not display in IE
+	Autoplay on/off works in firefox only
+	Video controls (play button and such) not in Firefox and cannot be toggled in chrome
+	-->
+	<param name="autoplay" value="false">
+</object>
+<br />
+
+<h2 id="4.7.6">Video and Track</h2>
+	<!-- 
+	Video only works in IE
+	-->
+<p>MP4 embedded as &lt;video&gt; with preload and loop and &lt;track&gt; child containing subtitles:</p>
+<video src="My%20Body%20is%20Ready.mp4" preload loop width="400" height="300">
+	<track kind="subtitles" src="hello.vtt" srclang="en" label="English" default>
+</video>
+<br />
+
+<h2 id="4.7.7">Audio and Source</h2>
+	<!-- 
+	Audio clip only works in Chrome
+	Blank in Mozilla, source not found in IE
+	-->
+<p>&lt;audio&gt; with loop enabled and a &lt;source&gt; child:</p>
+<audio controls loop>
+	<source src="videoplayback.m4a" type="audio/mp4">
+</audio>
+
+    <footer id="footer">
+      &copy; Thomas Powell Experience
+      <aside id="aside">CSE 134B</aside>
+      <address>
+        Contact us: ThomasPowellExperience@example.com
+      </address>
+    </footer>
+
+
+</body>
+</html>
